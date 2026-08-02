@@ -1,15 +1,913 @@
-Act as an elite conversion rate optimization (CRO) and technical SEO specialist. Generate a complete, production-ready, single-file HTML landing page for a "West Midlands EPC & Home Retrofit Calculator" service targeting homeowners in Birmingham, Solihull, and Coventry. 
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Follow these strict constraints to avoid generic 'AI slop' layout patterns:
-1. Frameworks: Use ONLY standard semantic HTML5 and Tailwind CSS via its official CDN script. Do not use React, Vue, or heavy external JS libraries.
-2. Structure: 
-   - Clean sticky header with a prominent 'Check Eligibility' click-to-scroll button.
-   - Hero section: Compelling headline targeting energy bill reductions and ECO4/WMCA government grants, with a dual-column split containing a professional 3-step lead-capture form on the right (Postcode, Annual Income Band, Name/Phone).
-   - Trust/Social Proof: A sleek, grid-based layout for local testimonials and recognized energy badges.
-   - Calculator Section: A beautifully styled UI placeholder container with ID 'epc-calculator-container' and vanilla JS form validation logic.
-   - Localized Footnote & Interlinking Hub: Clean footer links pointing to simulated target pages for Birmingham, Solihull, and Coventry to establish strong internal backlink profiles.
-3. Technical SEO & Tracking:
-   - Include standard Meta Title, Description, and OpenGraph tags highly optimized for West Midlands retrofit keywords.
-   - Inject a standard Google Analytics 4 tracking script template inside the <head>.
-   - Include a complete JSON-LD 'LocalBusiness' schema script block mapped to a professional West Midlands presence.
-4. Styling: Use a premium, corporate aesthetic—deep navy blues, clean emerald greens for trust accents, crisp modern sans-serif typography, generous white space, and zero unnecessary visual clutter or chaotic AI animations.
+  <!-- ============================================================ -->
+  <!-- TECHNICAL SEO: Core Meta Tags -->
+  <!-- ============================================================ -->
+  <title>West Midlands EPC & Home Retrofit Calculator | Birmingham, Solihull & Coventry</title>
+  <meta name="description" content="Free EPC and home retrofit calculator for Birmingham, Solihull and Coventry homeowners. Check your eligibility for Birmingham boiler grants, Solihull home insulation and Coventry ECO4 scheme funding today.">
+  <meta name="keywords" content="West Midlands EPC, home retrofit calculator, Birmingham boiler grants, Solihull home insulation, Coventry ECO4 scheme, West Midlands Combined Authority retrofit funding, energy performance certificate">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="West Midlands Retrofit Services">
+  <link rel="canonical" href="https://retrofitcost.com/">
+
+  <!-- ============================================================ -->
+  <!-- OPEN GRAPH: Social Sharing -->
+  <!-- ============================================================ -->
+  <meta property="og:title" content="West Midlands EPC & Home Retrofit Calculator">
+  <meta property="og:description" content="Check if you qualify for free boiler upgrades, insulation and ECO4 grants across the West Midlands.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://retrofitcost.com//">
+  <meta property="og:image" content="https://retrofitcost.com/assets/og-image.jpg">
+  <meta property="og:locale" content="en_GB">
+
+  <!-- ============================================================ -->
+  <!-- TWITTER CARDS -->
+  <!-- ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="West Midlands EPC & Home Retrofit Calculator">
+  <meta name="twitter:description" content="Free eligibility check for Birmingham boiler grants, Solihull insulation and Coventry ECO4 funding.">
+  <meta name="twitter:image" content="https://retrofitcost.com//assets/og-image.jpg">
+
+  <!-- ============================================================ -->
+  <!-- TAILWIND CSS: Official CDN -->
+  <!-- ============================================================ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              800: '#0f172a',
+              900: '#020617',
+            },
+            emerald: {
+              450: '#10b981',
+              500: '#059669',
+              600: '#047857',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ============================================================ -->
+  <!-- GOOGLE ANALYTICS 4: Placeholder -->
+  <!-- ============================================================ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- JSON-LD: LocalBusiness Schema -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "West Midlands EPC & Retrofit Services",
+    "description": "Professional EPC assessments and home retrofit services across Birmingham, Solihull, Coventry and the wider West Midlands region.",
+    "url": "hhttps://retrofitcost.com/",
+    "telephone": "+44-775-322-6214",
+    "email": "info@retrofitcost.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Unit 1, Charles Henry St",
+      "addressLocality": "Birmingham",
+      "addressRegion": "West Midlands",
+      "postalCode": "B12 0SJ",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "52.4862",
+      "longitude": "-1.8904"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Birmingham"
+      },
+      {
+        "@type": "City",
+        "name": "Solihull"
+      },
+      {
+        "@type": "City",
+        "name": "Coventry"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "West Midlands Combined Authority"
+      }
+    ],
+    "serviceType": [
+      "EPC Assessment",
+      "Boiler Upgrade",
+      "Home Insulation",
+      "ECO4 Grant Application",
+      "Retrofit Coordination"
+    ],
+    "openingHours": [
+      "Mo-Fr 08:00-18:00",
+      "Sa 09:00-14:00"
+    ],
+    "priceRange": "££",
+    "image": "https://retrofitcost.com//assets/logo.png"
+  }
+  </script>
+
+  <style>
+    /* ============================================================ */
+    /* CUSTOM UTILITIES: Smooth scrolling & focus states            */
+    /* ============================================================ */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .focus-ring:focus-visible {
+      outline: 2px solid #10b981;
+      outline-offset: 2px;
+    }
+  </style>
+<base target="_blank">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- ============================================================ -->
+  <!-- HEADER / NAVIGATION                                          -->
+  <!-- ============================================================ -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2 focus-ring rounded-md">
+          <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <span class="font-bold text-lg text-slate-900 tracking-tight">WM Retrofit</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#calculator" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors focus-ring rounded-md">Eligibility Check</a>
+          <a href="#services" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors focus-ring rounded-md">Services</a>
+          <a href="#grants" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors focus-ring rounded-md">Grants</a>
+          <a href="#contact" class="inline-flex items-center px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors focus-ring">Get Started</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-slate-600 hover:bg-slate-100 focus-ring" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 space-y-1">
+        <a href="#calculator" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600">Eligibility Check</a>
+        <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600">Services</a>
+        <a href="#grants" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600">Grants</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-600 font-semibold hover:bg-slate-50">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION: Deep Navy Background                           -->
+  <!-- ============================================================ -->
+  <section class="relative bg-navy-900 overflow-hidden">
+    <!-- Subtle background texture -->
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Copy -->
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            Serving Birmingham, Solihull & Coventry
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            Cut Your Energy Bills with <span class="text-emerald-400">Free Retrofit Funding</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8 max-w-xl">
+            West Midlands homeowners could save up to <strong class="text-white">£450 per year</strong> through the 
+            <strong class="text-white">West Midlands Combined Authority retrofit funding</strong> programmes. 
+            Check your eligibility for <strong class="text-white">Birmingham boiler grants</strong>, 
+            <strong class="text-white">Solihull home insulation</strong> and the 
+            <strong class="text-white">Coventry ECO4 scheme</strong> in 60 seconds.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#calculator" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-emerald-500/25 focus-ring">
+              Check My Eligibility
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold text-lg rounded-xl border border-white/10 transition-all focus-ring backdrop-blur-sm">
+              How It Works
+            </a>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center gap-6 text-slate-400 text-sm">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Government-backed</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>100% Free Assessment</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Local Installers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Calculator Card -->
+        <div id="epc-calculator-container" class="bg-white rounded-2xl shadow-2xl shadow-black/20 overflow-hidden">
+          <!-- Calculator Form State -->
+          <div id="calculator-form-state" class="p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-slate-900">Retrofit Eligibility Calculator</h2>
+                <p class="text-sm text-slate-500">Find out what funding you qualify for</p>
+              </div>
+            </div>
+
+            <form id="retrofit-form" class="space-y-5" novalidate>
+              <!-- Postcode Input -->
+              <div>
+                <label for="postcode" class="block text-sm font-semibold text-slate-700 mb-1.5">Property Postcode</label>
+                <input 
+                  type="text" 
+                  id="postcode" 
+                  name="postcode"
+                  placeholder="e.g. B1 1AA or CV1 2WT" 
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all uppercase"
+                  required
+                  aria-describedby="postcode-hint"
+                >
+                <p id="postcode-hint" class="mt-1.5 text-xs text-slate-500">We cover Birmingham (B), Coventry (CV), Dudley (DY), Walsall (WS), Wolverhampton (WV) and Worcester (WR).</p>
+              </div>
+
+              <!-- Income Input -->
+              <div>
+                <label for="income" class="block text-sm font-semibold text-slate-700 mb-1.5">Total Household Income</label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">£</span>
+                  <input 
+                    type="number" 
+                    id="income" 
+                    name="income"
+                    placeholder="e.g. 28000" 
+                    min="0"
+                    step="100"
+                    class="w-full pl-8 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    required
+                    aria-describedby="income-hint"
+                  >
+                </div>
+                <p id="income-hint" class="mt-1.5 text-xs text-slate-500">Combined annual income before tax for all adults in the property.</p>
+              </div>
+
+              <!-- Property Type (optional context) -->
+              <div>
+                <label for="property-type" class="block text-sm font-semibold text-slate-700 mb-1.5">Property Type</label>
+                <select 
+                  id="property-type" 
+                  name="property_type"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                >
+                  <option value="">Select property type...</option>
+                  <option value="detached">Detached house</option>
+                  <option value="semi-detached">Semi-detached house</option>
+                  <option value="terrace">Terraced house</option>
+                  <option value="bungalow">Bungalow</option>
+                  <option value="flat">Flat / Apartment</option>
+                </select>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                id="submit-btn"
+                class="w-full flex items-center justify-center px-6 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-emerald-500/20 focus-ring"
+              >
+                <span id="btn-text">Check Eligibility</span>
+                <svg id="btn-icon" class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+                <svg id="btn-spinner" class="hidden ml-2 w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+
+              <p class="text-xs text-center text-slate-400">No credit check required. Your data is handled securely.</p>
+            </form>
+          </div>
+
+          <!-- Calculator Success State (Hidden by default) -->
+          <div id="calculator-success-state" class="hidden p-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+
+              <h2 class="text-2xl font-bold text-slate-900 mb-2">Great News — You Qualify!</h2>
+              <p class="text-slate-600 mb-6">Based on your postcode and household income, you are eligible for government-backed retrofit funding.</p>
+
+              <!-- Savings Highlight -->
+              <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-6">
+                <p class="text-sm font-medium text-emerald-700 uppercase tracking-wide mb-1">Estimated Annual Saving</p>
+                <p class="text-5xl font-extrabold text-emerald-600">~ £450<span class="text-2xl text-emerald-500">/year</span></p>
+                <p class="text-sm text-emerald-600 mt-2">Based on current UK energy price caps and typical West Midlands property profiles.</p>
+              </div>
+
+              <!-- Eligible Measures -->
+              <div class="text-left bg-slate-50 rounded-xl p-5 mb-6">
+                <p class="text-sm font-semibold text-slate-700 mb-3">Measures you may be eligible for:</p>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                    </svg>
+                    A-rated boiler upgrade under Birmingham boiler grants
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                    </svg>
+                    Cavity wall and loft insulation via Solihull home insulation schemes
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                    </svg>
+                    ECO4 scheme support for Coventry ECO4 scheme applicants
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                    </svg>
+                    West Midlands Combined Authority retrofit funding top-ups
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Primary CTA -->
+              <a href="#contact" class="block w-full px-6 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-emerald-500/20 focus-ring mb-3">
+                Claim My Free Survey
+              </a>
+              <button id="reset-calculator" class="text-sm text-slate-500 hover:text-slate-700 underline focus-ring rounded">
+                Check another property
+              </button>
+            </div>
+          </div>
+
+          <!-- Calculator Ineligible State (Hidden by default) -->
+          <div id="calculator-ineligible-state" class="hidden p-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+              </div>
+
+              <h2 class="text-2xl font-bold text-slate-900 mb-2">You May Still Have Options</h2>
+              <p class="text-slate-600 mb-6">Your current details do not meet the standard ECO4 income threshold, but alternative funding routes may be available.</p>
+
+              <div class="bg-slate-50 rounded-xl p-5 mb-6 text-left">
+                <p class="text-sm font-semibold text-slate-700 mb-2">Alternative routes to explore:</p>
+                <ul class="space-y-2 text-sm text-slate-600">
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-500 mt-0.5">•</span>
+                    Green Home Finance through the West Midlands Combined Authority
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-500 mt-0.5">•</span>
+                    Local council flexibility funding for low EPC-rated homes
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-500 mt-0.5">•</span>
+                    Private retrofit loans with subsidised rates
+                  </li>
+                </ul>
+              </div>
+
+              <a href="#contact" class="block w-full px-6 py-4 bg-slate-800 hover:bg-slate-900 text-white font-bold text-lg rounded-xl transition-all focus-ring mb-3">
+                Speak to an Advisor
+              </a>
+              <button id="reset-calculator-alt" class="text-sm text-slate-500 hover:text-slate-700 underline focus-ring rounded">
+                Check another property
+              </button>
+            </div>
+          </div>
+
+          <!-- Calculator Error State (Hidden by default) -->
+          <div id="calculator-error-state" class="hidden p-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold text-slate-900 mb-2">Postcode Not Recognised</h2>
+              <p class="text-slate-600 mb-6" id="error-message">We currently only serve the West Midlands region.</p>
+              <button id="reset-calculator-err" class="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-semibold rounded-lg transition-all focus-ring">
+                Try Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TRUST BAR: Logos / Social Proof                              -->
+  <!-- ============================================================ -->
+  <section class="bg-white border-b border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-medium text-slate-400 uppercase tracking-wider mb-6">Trusted across the West Midlands</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale">
+        <span class="text-lg font-bold text-slate-700">Birmingham City Council</span>
+        <span class="text-lg font-bold text-slate-700">Solihull MBC</span>
+        <span class="text-lg font-bold text-slate-700">Coventry City Council</span>
+        <span class="text-lg font-bold text-slate-700">WMCA</span>
+        <span class="text-lg font-bold text-slate-700">Ofgem Registered</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SERVICES SECTION                                             -->
+  <!-- ============================================================ -->
+  <section id="services" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Complete Home Retrofit Services</h2>
+        <p class="text-lg text-slate-600">From EPC assessment to installation, we manage every step of your home energy upgrade across Birmingham, Solihull and Coventry.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-500/5 transition-all">
+          <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors">
+            <svg class="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">EPC Assessment & Rating</h3>
+          <p class="text-slate-600 leading-relaxed">Certified domestic energy assessors provide accurate EPC ratings across the West Midlands. Required for all grant applications and property sales.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-500/5 transition-all">
+          <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors">
+            <svg class="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Boiler Upgrades & Heating</h3>
+          <p class="text-slate-600 leading-relaxed">Access <strong>Birmingham boiler grants</strong> and A-rated combi boiler installations. We handle ECO4 paperwork and coordinate Gas Safe registered engineers.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-500/5 transition-all">
+          <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors">
+            <svg class="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Insulation & Fabric</h3>
+          <p class="text-slate-600 leading-relaxed">Cavity wall, solid wall and loft insulation funded through <strong>Solihull home insulation</strong> programmes and the <strong>Coventry ECO4 scheme</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- GRANTS & FUNDING SECTION                                     -->
+  <!-- ============================================================ -->
+  <section id="grants" class="py-20 lg:py-28 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">Government Grants & Local Authority Funding</h2>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            The <strong>West Midlands Combined Authority retrofit funding</strong> pool works alongside national ECO4 obligations to deliver free and subsidised energy improvements to qualifying households.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shrink-0">
+                <span class="text-white font-bold text-sm">01</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 mb-1">ECO4 Scheme</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">The Energy Company Obligation phase 4 targets low-income and fuel-poor households. If your income is under £31,000 and your home has an EPC of D or below, you likely qualify.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shrink-0">
+                <span class="text-white font-bold text-sm">02</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 mb-1">Local Authority Flexible Eligibility (LA Flex)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Birmingham, Solihull and Coventry councils can nominate households that do not meet standard ECO4 criteria but still need support. This widens access to <strong>Birmingham boiler grants</strong> and insulation.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center shrink-0">
+                <span class="text-white font-bold text-sm">03</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 mb-1">WMCA Retrofit Accelerator</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">The West Midlands Combined Authority retrofit funding accelerator provides additional top-up grants for complex properties and hard-to-treat homes across the region.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats / Proof Panel -->
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
+          <h3 class="text-lg font-bold text-slate-900 mb-6">Funding Impact Across the West Midlands</h3>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="bg-slate-50 rounded-xl p-5 text-center">
+              <p class="text-3xl font-extrabold text-emerald-600">£4,200</p>
+              <p class="text-sm text-slate-500 mt-1">Average grant value</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-5 text-center">
+              <p class="text-3xl font-extrabold text-emerald-600">£450</p>
+              <p class="text-sm text-slate-500 mt-1">Typical yearly saving</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-5 text-center">
+              <p class="text-3xl font-extrabold text-emerald-600">2,400+</p>
+              <p class="text-sm text-slate-500 mt-1">Homes upgraded</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-5 text-center">
+              <p class="text-3xl font-extrabold text-emerald-600">B-C</p>
+              <p class="text-sm text-slate-500 mt-1">Average EPC uplift</p>
+            </div>
+          </div>
+
+          <div class="bg-navy-900 rounded-xl p-6 text-white">
+            <p class="text-sm font-medium text-slate-300 mb-2">Funding deadline</p>
+            <p class="text-lg font-semibold">ECO4 runs until March 2026 — applications are assessed on a first-come, first-served basis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- HOW IT WORKS SECTION                                         -->
+  <!-- ============================================================ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Simple Four-Step Process</h2>
+        <p class="text-lg text-slate-600">No upfront costs. No complicated paperwork. We manage the entire grant application and installation process.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative">
+          <div class="w-14 h-14 bg-emerald-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg shadow-emerald-500/20">1</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Online Check</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Use our calculator above to verify your postcode and income eligibility against West Midlands funding criteria.</p>
+        </div>
+
+        <div class="relative">
+          <div class="w-14 h-14 bg-emerald-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg shadow-emerald-500/20">2</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Free Home Survey</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A local retrofit assessor visits your property to conduct a full EPC assessment and recommend the right measures.</p>
+        </div>
+
+        <div class="relative">
+          <div class="w-14 h-14 bg-emerald-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg shadow-emerald-500/20">3</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Grant Application</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We submit your application to the ECO4 scheme, WMCA and any relevant local authority programmes on your behalf.</p>
+        </div>
+
+        <div class="relative">
+          <div class="w-14 h-14 bg-emerald-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg shadow-emerald-500/20">4</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Installation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Gas Safe and PAS 2030 certified installers complete the work. You start saving on energy bills immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CONTACT / CTA SECTION                                        -->
+  <!-- ============================================================ -->
+  <section id="contact" class="py-20 lg:py-28 bg-navy-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">Ready to Lower Your Energy Bills?</h2>
+      <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
+        Join thousands of West Midlands homeowners who have already reduced their energy costs through Birmingham boiler grants, Solihull home insulation and Coventry ECO4 scheme support.
+      </p>
+
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-xl mx-auto">
+        <form class="space-y-4 text-left" onsubmit="event.preventDefault(); alert('Thank you. A local advisor will call you within 24 hours.');">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="contact-name" class="block text-sm font-medium text-slate-300 mb-1">Full Name</label>
+              <input type="text" id="contact-name" class="w-full px-4 py-3 bg-white/10 border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="John Smith" required>
+            </div>
+            <div>
+              <label for="contact-phone" class="block text-sm font-medium text-slate-300 mb-1">Phone Number</label>
+              <input type="tel" id="contact-phone" class="w-full px-4 py-3 bg-white/10 border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="07xxx xxxxxx" required>
+            </div>
+          </div>
+          <div>
+            <label for="contact-email" class="block text-sm font-medium text-slate-300 mb-1">Email Address</label>
+            <input type="email" id="contact-email" class="w-full px-4 py-3 bg-white/10 border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="john@example.com" required>
+          </div>
+          <div>
+            <label for="contact-postcode" class="block text-sm font-medium text-slate-300 mb-1">Postcode</label>
+            <input type="text" id="contact-postcode" class="w-full px-4 py-3 bg-white/10 border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 uppercase" placeholder="B1 1AA" required>
+          </div>
+          <button type="submit" class="w-full px-6 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-emerald-500/25 focus-ring mt-2">
+            Request Free Callback
+          </button>
+          <p class="text-xs text-slate-400 text-center">By submitting, you agree to our privacy policy. No spam — ever.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER: Internal Linking Hub & Legal                         -->
+  <!-- ============================================================ -->
+  <footer class="bg-slate-900 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Brand Column -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <span class="font-bold text-lg text-white tracking-tight">WM Retrofit</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Accredited EPC assessors and retrofit coordinators serving Birmingham, Solihull, Coventry and the wider West Midlands Combined Authority area.
+          </p>
+          <p class="text-slate-500 text-sm">PAS 2030 certified • TrustMark registered • Gas Safe</p>
+        </div>
+
+        <!-- Services Column -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="/epc-assessment/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">EPC Assessment</a></li>
+            <li><a href="/boiler-upgrades/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Boiler Upgrades</a></li>
+            <li><a href="/home-insulation/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Home Insulation</a></li>
+            <li><a href="/eco4-grants/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">ECO4 Grants</a></li>
+            <li><a href="/retrofit-coordination/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Retrofit Coordination</a></li>
+          </ul>
+        </div>
+
+        <!-- Areas Column (Local SEO Hub) -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Areas We Cover</h4>
+          <ul class="space-y-3">
+            <li><a href="/birmingham/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Birmingham</a></li>
+            <li><a href="/solihull/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Solihull</a></li>
+            <li><a href="/coventry/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Coventry</a></li>
+            <li><a href="/walsall/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Walsall</a></li>
+            <li><a href="/wolverhampton/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Wolverhampton</a></li>
+            <li><a href="/dudley/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Dudley</a></li>
+          </ul>
+        </div>
+
+        <!-- Local Hub Column (Deep Internal Linking) -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Local Retrofit Hubs</h4>
+          <ul class="space-y-3">
+            <li><a href="/edgbaston-retrofits/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Edgbaston Retrofits</a></li>
+            <li><a href="/sutton-coldfield-epcs/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Sutton Coldfield EPCs</a></li>
+            <li><a href="/shirley-energy-saving/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Shirley Energy Saving</a></li>
+            <li><a href="/knowle-insulation-hub/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Knowle Insulation Hub</a></li>
+            <li><a href="/radford-boiler-swaps/" class="text-slate-400 hover:text-emerald-400 text-sm transition-colors focus-ring rounded">Radford Boiler Swaps</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-500 text-sm">© 2026 West Midlands Retrofit Services. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy-policy/" class="text-slate-500 hover:text-slate-300 text-sm transition-colors focus-ring rounded">Privacy Policy</a>
+          <a href="/terms/" class="text-slate-500 hover:text-slate-300 text-sm transition-colors focus-ring rounded">Terms of Service</a>
+          <a href="/cookie-policy/" class="text-slate-500 hover:text-slate-300 text-sm transition-colors focus-ring rounded">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- VANILLA JAVASCRIPT: Calculator Engine                        -->
+  <!-- ============================================================ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // -----------------------------------------------------------
+      // DOM Element References
+      // -----------------------------------------------------------
+      const form          = document.getElementById('retrofit-form');
+      const formState     = document.getElementById('calculator-form-state');
+      const successState  = document.getElementById('calculator-success-state');
+      const ineligibleState = document.getElementById('calculator-ineligible-state');
+      const errorState    = document.getElementById('calculator-error-state');
+      const submitBtn     = document.getElementById('submit-btn');
+      const btnText       = document.getElementById('btn-text');
+      const btnIcon       = document.getElementById('btn-icon');
+      const btnSpinner    = document.getElementById('btn-spinner');
+      const errorMessage  = document.getElementById('error-message');
+
+      // Reset buttons
+      document.getElementById('reset-calculator').addEventListener('click', resetCalculator);
+      document.getElementById('reset-calculator-alt').addEventListener('click', resetCalculator);
+      document.getElementById('reset-calculator-err').addEventListener('click', resetCalculator);
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu    = document.getElementById('mobile-menu');
+
+      mobileMenuBtn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // -----------------------------------------------------------
+      // West Midlands Postcode Prefixes
+      // -----------------------------------------------------------
+      const validPrefixes = ['B', 'CV', 'DY', 'WS', 'WV', 'WR'];
+      const incomeThreshold = 31000;
+
+      // -----------------------------------------------------------
+      // Helper: Normalise and validate postcode prefix
+      // -----------------------------------------------------------
+      function getPostcodePrefix(postcode) {
+        // Remove all whitespace and uppercase
+        const clean = postcode.replace(/\s/g, '').toUpperCase();
+        // Extract leading letters (prefix)
+        const match = clean.match(/^[A-Z]+/);
+        return match ? match[0] : '';
+      }
+
+      function isValidWestMidlandsPostcode(postcode) {
+        const prefix = getPostcodePrefix(postcode);
+        return validPrefixes.includes(prefix);
+      }
+
+      // -----------------------------------------------------------
+      // Helper: Show / Hide calculator states
+      // -----------------------------------------------------------
+      function showState(stateElement) {
+        [formState, successState, ineligibleState, errorState].forEach(el => el.classList.add('hidden'));
+        stateElement.classList.remove('hidden');
+      }
+
+      function setLoading(isLoading) {
+        submitBtn.disabled = isLoading;
+        if (isLoading) {
+          btnText.textContent = 'Checking...';
+          btnIcon.classList.add('hidden');
+          btnSpinner.classList.remove('hidden');
+          submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+        } else {
+          btnText.textContent = 'Check Eligibility';
+          btnIcon.classList.remove('hidden');
+          btnSpinner.classList.add('hidden');
+          submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+        }
+      }
+
+      function resetCalculator() {
+        form.reset();
+        showState(formState);
+      }
+
+      // -----------------------------------------------------------
+      // Form Submission Handler
+      // -----------------------------------------------------------
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Collect values
+        const postcodeInput = document.getElementById('postcode').value.trim();
+        const incomeInput   = parseFloat(document.getElementById('income').value);
+
+        // Basic validation
+        if (!postcodeInput) {
+          errorMessage.textContent = 'Please enter a valid postcode.';
+          showState(errorState);
+          return;
+        }
+
+        if (isNaN(incomeInput) || incomeInput < 0) {
+          errorMessage.textContent = 'Please enter a valid annual income.';
+          showState(errorState);
+          return;
+        }
+
+        // Simulate brief loading for UX
+        setLoading(true);
+
+        setTimeout(function() {
+          setLoading(false);
+
+          // 1. Check postcode validity
+          if (!isValidWestMidlandsPostcode(postcodeInput)) {
+            errorMessage.textContent = 
+              'We currently only serve the West Midlands region (Birmingham, Coventry, Solihull, Walsall, Wolverhampton, Dudley and Worcester postcodes).';
+            showState(errorState);
+            return;
+          }
+
+          // 2. Check income threshold
+          if (incomeInput <= incomeThreshold) {
+            // Eligible — show success with £450/year estimate
+            showState(successState);
+
+            // Optional: Push GA4 event if available
+            if (typeof gtag === 'function') {
+              gtag('event', 'calculator_eligible', {
+                event_category: 'engagement',
+                event_label: 'west_midlands_retrofit',
+                value: 1
+              });
+            }
+          } else {
+            // Income too high — show alternatives
+            showState(ineligibleState);
+
+            if (typeof gtag === 'function') {
+              gtag('event', 'calculator_ineligible', {
+                event_category: 'engagement',
+                event_label: 'west_midlands_retrofit',
+                value: 0
+              });
+            }
+          }
+        }, 600); // 600ms artificial delay for perceived processing
+      });
+
+    })();
+  </script>
+
+</body>
+</html>
